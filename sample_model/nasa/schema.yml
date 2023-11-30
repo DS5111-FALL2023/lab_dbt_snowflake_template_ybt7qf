@@ -1,0 +1,23 @@
+
+version: 2
+
+models:
+  - name: active_faciities
+    description: "nasa active site names only"
+    columns:
+      - name: status
+        description: "status, active or null, but should be Active only for this table"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Active']
+
+  - name: active_faciities_2
+    description: "nasa active site names only - v2"
+    columns:
+      - name: status
+        description: "status, active or null, but should be Active only for this table"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Active']
